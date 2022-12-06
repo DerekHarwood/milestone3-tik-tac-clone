@@ -1,11 +1,11 @@
 {
   "root": true,
+  "api": {
+    "projectId": "3igq4g9q",
+    "dataset": "production"
+  },
   "project": {
     "name": "tiktac-backend"
-  },
-  "api": {
-    "projectId": "2s5qb1a7",
-    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
