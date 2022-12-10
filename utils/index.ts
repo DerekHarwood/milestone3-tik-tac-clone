@@ -5,14 +5,14 @@ export const createOrGetUser = async (response: any,
 addUser:any) => {
 const decoded = response.credential;
 
-const {name, picture, sub }=decoded;
+const { name, picture, sub } = decoded;
 
 const user = {
-    _id:sub,
-    _type:'user',
-    userName:name,
-    image:picture
-}
+    _id: sub,
+    _type: 'user',
+    userName: name,
+    image: picture
+};
 
 addUser(user);
 
