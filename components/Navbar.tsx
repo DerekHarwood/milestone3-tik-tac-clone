@@ -30,17 +30,11 @@ const Navbar = () => {
                 {user ? (
                     <div>Logged In</div>
                 ) : (
-<<<<<<< HEAD
                     <GoogleLogin
                         onSuccess={(response) =>
                         createOrGetUser(response)}
                         onError={() => console.log
                         ('Error')}
-=======
-                    <GoogleLogin 
-                        onSuccess={(response) => console.log(response)}
-                        onError={() => console.log('Error')}
->>>>>>> 8adee50e6efa6fa494e25d2847d814646bf17f6b
                     />
                 )}
             </div>
