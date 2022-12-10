@@ -39,10 +39,9 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                             <div className="flex items-center gap-2">
                                 <p className='flex gap-2 items-cemter md:text-md font-bold text-promary'>
                                     {post.postedBy.userName} {''}
+                                <GoVerified className="text-blue-400 text-md"/>
                                 </p>
-                                <GoVerified
-                                    className="text-blue-400 text-md" />
-                                <p className="capitalize font-medium txt-xxs text-gray-500 hidden md:block">
+                                <p className="capitalize font-medium txt-xs text-gray-500 hidden md:block">
                                     {post.postedBy.userName}</p>
 
                             </div>
@@ -50,6 +49,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                     </div>
                 </div>
             </div>
+            
             <div className="lg:ml-20 flex gap-4 relative">
                 <div className="rounded-3xl">
                     <Link href="/">
