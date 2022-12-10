@@ -8,7 +8,8 @@ import useAuthStore from '../store/authStore';
 import {client} from '../utils/client';
 
 
-const upload = () => {
+const Upload = () => {
+  const [isLoading, setIsLoading]=useState(false)
   return (
     <div className="flex w-full h-full">
         <div className="bg-white rounded-lg">
@@ -23,7 +24,13 @@ const upload = () => {
                 mt-10 w-[260px] h-[460px] p-10
                 cursor-pointer hover:border-red-300
                 hover:bg-gray-100">
+                  {isLoading ? (
+                    <p>Uploading...</p>
+                  ): (
+                    <div>
 
+                    </div>
+                  )}
                 </div>
             </div>
         </div>
