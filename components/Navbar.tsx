@@ -56,6 +56,10 @@ const Navbar = () => {
                         <button
                             type="button"
                             className="px-2"
+                            onClick={() => {
+                                googleLogout();
+                                removeUser();
+                            }}
                         >
                             <AiOutlineLogout color="red" fontSize={21} />
                         </button>
