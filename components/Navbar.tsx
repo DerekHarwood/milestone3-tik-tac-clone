@@ -30,8 +30,14 @@ const Navbar = () => {
             <div>SEARCH</div>
 
             <div>
-                {user ? (
-                    <div>Logged In</div>
+                {userProfile ? (
+                    <div className="flex gap-5 md:gap-10">
+                    <Link href="/upload">
+                        <button>
+                          <IoMdAdd className="text-xl" />  
+                        </button>
+                    </Link>
+                    </div>
                 ) : (
                     <GoogleLogin
                         onSuccess={(response) => createOrGetUser
