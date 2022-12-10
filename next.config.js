@@ -2,8 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['flic.kr'],
-  }
+    domains: [
+      'www.logodesign.net'
+  ],
+  },
 }
 
 module.exports = nextConfig
