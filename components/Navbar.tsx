@@ -13,7 +13,7 @@ import useAuthStore from '../store/authStore';
 
 const Navbar = () => {
     const user = false;
-    const { userProfile, addUser } = useAuthStore();
+    const { userProfile, addUser, removeUser } = useAuthStore();
 
     return (
         <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4">
@@ -56,6 +56,11 @@ const Navbar = () => {
                     )}
                     <button
                         type="button"
+                        className="px-2"
+                        onClick={()=> {
+                            googleLogout();
+                            removeUser();
+                        }}
                         >
                         <AiOutlineLogout color="red" fontSize={21}/>
                     </button>
