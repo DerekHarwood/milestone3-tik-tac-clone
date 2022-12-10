@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     domains: [
       'www.logodesign.net',
-      '1h3.googleusercontent.com'
-  ],
+      'lh3.googleusercontent.com'
+    ],
   },
 }
 
