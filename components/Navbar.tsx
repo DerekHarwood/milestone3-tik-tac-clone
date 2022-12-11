@@ -49,7 +49,7 @@ const Navbar = () => {
                                         height={40}
                                         className="rounded-full cursor-pointer"
                                         src={userProfile.image}
-                                        alt="profile photo"
+                                        alt="user profile"
                                     />
                                 </>
                             </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                     </div>
                 ) : (
                     <GoogleLogin
-                        onSuccess={(response) => 
+                        onSuccess={(response) =>
                             createOrGetUser
                             (response, addUser)}
                         onError={() => console.log('Error')}
