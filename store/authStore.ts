@@ -1,20 +1,25 @@
 
 import create from 'zustand';
-import { persist } from 'zustand/middleware';
+import {persist} from 'zustand/middleware';
 import axios from 'axios';
 
-import { BASE_URL } from '../utils';
+import {BASE_URL} from '../utils';
 
 const authStore = (set: any) => ({
     userProfile: null,
+    allUsers:[],
 
-    addUser: (user: any) => set({ userProfile: user }),
-    removeUser: () => set({ userProfile: null })
-    //additional function to auth store
+
+    addUser: (user:any)=>set ({userProfile: user}),
+    removeUser: () => set({ userProfile : null }),
+
     fetchAllUsers: async () => {
         const response = await axios.get(`${BASE_URL}/api/
-    users`);
+        users`);
+
+       set({allUsers:response.data}) 
     }
+
 });
 
 const useAuthStore = create(
