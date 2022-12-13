@@ -45,7 +45,7 @@ const Upload = () => {
   const handlePost = async () => {
     if(caption && videoAsset?._id && category) {
       setSavingPost(true);
-      
+
       const document = {
         _type: 'post',
         caption,
